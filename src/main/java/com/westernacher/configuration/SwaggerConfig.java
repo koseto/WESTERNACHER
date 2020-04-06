@@ -13,14 +13,14 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableSwagger2
 public class SwaggerConfig {
 
-	@Bean
-	public Docket configSwagger() {
+    @Bean
+    public Docket configSwagger() {
 
-		return new Docket(DocumentationType.SWAGGER_2)
-			.select()
-			.apis(RequestHandlerSelectors.basePackage("com.westernacher"))
-			.paths(PathSelectors.any())
-			.build()
-			.pathMapping("/");
-	}
+        return new Docket(DocumentationType.SWAGGER_2)
+            .select()
+            .apis(RequestHandlerSelectors.basePackage("com.westernacher"))
+            .paths(PathSelectors.any())
+            .build()
+            .pathMapping("/");
+    }
 }

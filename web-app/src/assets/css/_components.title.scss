@@ -1,0 +1,25 @@
+@import 'settings.fonts';
+@import 'settings.colors';
+
+.title {
+  font-family: $fontFamily;
+  font-size: $fontSizeHuge;
+  font-weight: 700;
+  padding-bottom: 15px;
+  letter-spacing: 1px;
+
+  &--smaller {
+    @extend .title;
+    font-size: $fontSizeBig;
+    line-height: 3.4rem;
+    color: $mainColorGray;
+  }
+}
+
+@media (min-width: 48rem) {
+  .title {
+    &--smaller {
+      font-size: $fontSizeHeading;
+    }
+  }
+}

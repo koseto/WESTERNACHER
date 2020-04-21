@@ -24,7 +24,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/assets/css/ui-library.scss"
             ],
             "scripts": []
           },
@@ -88,7 +88,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/assets/css/ui-library.scss"
             ],
             "scripts": []
           }
@@ -121,5 +121,10 @@
       }
     }
   },
-  "defaultProject": "web-app"
+  "defaultProject": "web-app",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+  }
 }

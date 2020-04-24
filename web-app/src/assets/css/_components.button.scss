@@ -1,0 +1,79 @@
+@import 'settings.colors';
+@import 'settings.fonts';
+
+@mixin setInvertedButtonStyles($color) {
+  background: #fff;
+  color: $color;
+  border: 1px solid $color;
+  &:hover {
+    background: none;
+  }
+}
+
+$buttonFontSize: 1.5rem;
+
+.btn,
+button[type='submit'] {
+  background: $buttonColor;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  color: #fff;
+  font-weight: 700;
+  font-size: $buttonFontSize;
+  padding: 12px 30px;
+  cursor: pointer;
+  transition: border-width 0.07s ease-in;
+  display: inline-block;
+}
+
+.btn:hover,
+button[type='submit']:hover {
+  background: $buttonColorHover;
+}
+
+.btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  pointer-events: none;
+  background: $buttonDisabled;
+}
+
+.btn {
+  // for link buttons
+  &--link {
+    color: #3e34a6;
+    font-weight: bold;
+    cursor: pointer;
+    background: none;
+    padding: 12px 0;
+
+    &:disabled {
+      color: $buttonDisabled;
+    }
+
+    &:hover {
+      background: none;
+    }
+  }
+
+  &--less-padding {
+    padding: 14px 20px !important;
+  }
+
+  // for inverted or secondary button
+  &--inverted {
+    @include setInvertedButtonStyles($mainColorBlue);
+  }
+
+  &--inverted-purple {
+    @include setInvertedButtonStyles($mainColor);
+  }
+
+  &--transparent-background {
+    background: transparent;
+  }
+
+  &--no-border {
+    border: 0;
+  }
+}

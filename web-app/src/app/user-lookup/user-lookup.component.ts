@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-user-lookup',
@@ -7,7 +8,9 @@ import {Component, OnInit} from '@angular/core';
 })
 export class UserLookupComponent implements OnInit {
 
-  constructor() {
+  constructor(
+    private _modalService: NgbModal
+  ) {
   }
 
   ngOnInit(): void {

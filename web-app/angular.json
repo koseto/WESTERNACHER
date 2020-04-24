@@ -24,9 +24,15 @@
               "src/assets"
             ],
             "styles": [
-              "src/assets/css/ui-library.scss"
+              "src/assets/css/app.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/assets/css",
+                "node_modules"
+              ]
+            }
           },
           "configurations": {
             "production": {
@@ -88,7 +94,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/assets/css/ui-library.scss"
+              "src/assets/css/app.scss"
             ],
             "scripts": []
           }

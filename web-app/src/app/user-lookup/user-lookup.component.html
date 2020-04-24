@@ -1,1 +1,10 @@
 <h1 class="title title--smaller">User Accounts</h1>
+<button type="button" class="btn" id="create-new-account-button">Create</button>
+<ngx-datatable class="datatable" id="account-lookup-grid"
+               [rowHeight]="70">
+  <ngx-datatable-column name="Last Name"></ngx-datatable-column>
+  <ngx-datatable-column name="First Name"></ngx-datatable-column>
+  <ngx-datatable-column name="Date of Birth"></ngx-datatable-column>
+  <ngx-datatable-column name="Email"></ngx-datatable-column>
+  <ngx-datatable-column name="Actions"></ngx-datatable-column>
+</ngx-datatable>

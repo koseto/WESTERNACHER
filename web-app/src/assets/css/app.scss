@@ -1,0 +1,15 @@
+// Settings
+@import 'settings.colors';
+@import 'settings.fonts';
+
+// bootstrap
+@import 'bootstrap/scss/functions';
+@import 'bootstrap/scss/variables';
+@import 'bootstrap/scss/mixins';
+
+@import 'bootstrap/scss/utilities/display';
+@import 'bootstrap/scss/modal';
+
+// Reusable designed pieces of UI, components
+@import 'components.title';
+@import 'components.button';

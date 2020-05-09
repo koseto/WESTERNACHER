@@ -1,6 +1,22 @@
 $mainColor: #6f2e91;
 $mainColorGray: #272727;
 $mainColorBlue: #3d33a6;
+$charcoal-80: #525252;
+
+//Buttons
 $buttonColorHover: #312985;
 $buttonDisabled: #b4b4b4;
 $buttonColor: $mainColorBlue;
+
+//Borders
+$borderColor: #d9d9d9;
+
+//Tables
+$tableBorderColor: transparent;
+$tableAccentColor: $mainColor !default;
+$tableBorderColor: $borderColor !default;
+$tableRowEvenBackgroundColor: #fff !default;
+$tableRowOddBackgroundColor: #f0f0f0 !default;
+$bodyCellFontColor: $mainColorGray !default;
+$headerCellFontColor: $charcoal-80 !default;
+$iconColor: $mainColorGray !default;

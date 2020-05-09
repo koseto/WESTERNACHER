@@ -1,10 +1,21 @@
 <h1 class="title title--smaller">User Accounts</h1>
-<button type="button" class="btn" id="create-new-account-button">Create</button>
+<app-create-user></app-create-user>
 <ngx-datatable class="datatable" id="account-lookup-grid"
-               [rowHeight]="70">
-  <ngx-datatable-column name="Last Name"></ngx-datatable-column>
-  <ngx-datatable-column name="First Name"></ngx-datatable-column>
-  <ngx-datatable-column name="Date of Birth"></ngx-datatable-column>
-  <ngx-datatable-column name="Email"></ngx-datatable-column>
-  <ngx-datatable-column name="Actions"></ngx-datatable-column>
+               *ngIf="members$"
+               columnMode="force"
+               [rows]="members$|async"
+               [rowHeight]="70"
+               [headerHeight]="55"
+               [sorts]="currentSorts"
+               (sort)="sort($event)">
+  <ngx-datatable-column name="Last Name" prop="lastName"
+                        [resizeable]="false"></ngx-datatable-column>
+  <ngx-datatable-column name="First Name" prop="firstName"
+                        [resizeable]="false"></ngx-datatable-column>
+  <ngx-datatable-column name="Date of Birth" [width]="80" prop="dateOfBirth"
+                        [resizeable]="false"></ngx-datatable-column>
+  <ngx-datatable-column name="Email" prop="email" [resizeable]="false"></ngx-datatable-column>
+  <ngx-datatable-column name="Actions" [width]="45" [sortable]="false">
+    <app-info-modal></app-info-modal>
+  </ngx-datatable-column>
 </ngx-datatable>

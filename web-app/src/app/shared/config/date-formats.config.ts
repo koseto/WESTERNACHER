@@ -1,0 +1,4 @@
+export const DATE_FORMATS_CONFIG = {
+  ISO_DATE: 'YYYY-MM-DD',
+  UI_DATE: 'MM/DD/YYYY'
+};

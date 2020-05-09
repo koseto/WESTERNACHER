@@ -1,7 +1,13 @@
 //Font-sizes
+$fontSizeRegular: 1.6rem;
 $fontSizeBig: 2.5rem;
 $fontSizeHeading: 3rem;
 $fontSizeHuge: 3.7rem;
 
 // Font family variables
 $fontFamily: Source Sans Pro, Helvetica, Arial, 'Lucida Grande', sans-serif;
+
+//Tables
+$firstLastCellPadding: 15px !default;
+$headerCellFontSize: $fontSizeRegular !default;
+$bodyCellFontSize: $fontSizeRegular !default;

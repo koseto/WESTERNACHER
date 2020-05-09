@@ -8,7 +8,7 @@ const routes: Routes = [
     component: UserLookupComponent
   },
   {
-    path: '',
+    path: '**',
     redirectTo: '/users',
     pathMatch: 'full'
   }

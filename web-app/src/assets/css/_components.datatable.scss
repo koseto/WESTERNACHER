@@ -1,0 +1,213 @@
+@import 'settings.fonts';
+@import 'settings.colors';
+@import 'settings.icons';
+
+$tableAccentColor: $mainColor !default;
+$tableBorderColor: $borderColor !default;
+$tableRowEvenBackgroundColor: #fff !default;
+$tableRowOddBackgroundColor: #f0f0f0 !default;
+$firstLastCellPadding: 15px !default;
+$bodyCellFontColor: $mainColorGray !default;
+$headerCellFontColor: $charcoal-80 !default;
+$headerCellFontSize: $fontSizeRegular !default;
+$bodyCellFontSize: $fontSizeRegular !default;
+$iconColor: $mainColorGray !default;
+.datatable {
+  &--top-border {
+    border-top: 1px solid $tableBorderColor;
+  }
+
+  &--bottom-border {
+    border-bottom: 1px solid $tableBorderColor;
+  }
+
+  &--body-top-border {
+    .datatable-body {
+      border-top: 1px solid $tableBorderColor;
+    }
+  }
+
+  &--body-bottom-border {
+    .datatable-body {
+      border-bottom: 1px solid $tableBorderColor;
+    }
+  }
+
+  &--footer-top-border {
+    .datatable-footer {
+      border-top: 1px solid $tableBorderColor;
+    }
+  }
+
+  &--footer-bottom-border {
+    .datatable-footer {
+      border-bottom: 1px solid $tableBorderColor;
+    }
+  }
+
+  &--no-padding {
+    .datatable-body-cell:first-child,
+    .datatable-header-cell:first-child {
+      padding-left: 0px;
+    }
+
+    .datatable-body-cell:first-child,
+    .datatable-header-cell:last-child {
+      padding-right: 0px;
+    }
+  }
+
+  &--row-action {
+    .datatable-row-wrapper {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  &--auto-height-header {
+    .datatable {
+      &-header {
+        &-cell {
+          & > div {
+            align-items: center;
+            display: flex;
+          }
+        }
+      }
+    }
+  }
+
+  &-header {
+    border-bottom: 5px solid $tableAccentColor;
+    font-weight: 700;
+    line-height: 2rem;
+
+    &-cell {
+      font-size: $headerCellFontSize;
+      color: $headerCellFontColor;
+      line-height: 2rem !important;
+      padding: 15px 0;
+
+      &:last-child {
+        padding-right: $firstLastCellPadding;
+      }
+
+      &:first-child {
+        padding-left: $firstLastCellPadding;
+      }
+
+      &.sortable {
+        .sort-btn {
+          width: $iconExtraSmall;
+          height: $iconExtraSmall;
+          flex: none;
+          background: url('../images/sort-default.svg') no-repeat;
+
+          &.datatable-icon-up {
+            background: url('../images/sort-up.svg') no-repeat;
+          }
+
+          &.datatable-icon-down {
+            background: url('../images/sort-down.svg') no-repeat;
+          }
+        }
+      }
+    }
+  }
+
+  &-body {
+    &-row {
+      border-bottom: 1px solid $tableBorderColor;
+    }
+
+    &-cell {
+      height: 100% !important;
+      position: relative;
+      padding: 15px 0;
+      color: $bodyCellFontColor;
+      font-size: $bodyCellFontSize;
+
+      &:last-child {
+        padding-right: $firstLastCellPadding;
+      }
+
+      &:first-child {
+        padding-left: $firstLastCellPadding;
+      }
+    }
+  }
+
+  &-footer {
+    display: flex;
+    align-items: center;
+  }
+
+  //general table styles
+  &-cell {
+    &--actionable {
+      overflow: visible !important;
+    }
+
+    &--less-padding {
+      padding: 3px 0 !important;
+    }
+
+    &--text-right {
+      padding-right: 20px;
+      text-align: right;
+    }
+
+    &--accented {
+      background-color: #d7f2f5;
+    }
+  }
+
+  &-row {
+    &-even {
+      background-color: $tableRowEvenBackgroundColor;
+    }
+
+    &-odd {
+      background-color: $tableRowOddBackgroundColor;
+    }
+  }
+
+  &-action-button {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+  }
+
+  .empty-row {
+    padding: 15px;
+  }
+
+  &-details-toggle {
+    color: black;
+    cursor: pointer;
+
+    &__icon {
+      display: none;
+    }
+
+    svg {
+      width: $iconExtraSmall;
+      height: $iconExtraSmall;
+      fill: $iconColor;
+    }
+
+    &--expand {
+      .expand {
+        display: block;
+      }
+    }
+
+    &--collapse {
+      .collapse {
+        display: block;
+      }
+    }
+  }
+}
